@@ -451,5 +451,5 @@ proc isValidUrl*(src: string): tuple[answer: bool, reason: string] {.inline.} =
   try:
     discard parser.parse(src)
     return (answer: true, reason: "")
-  except URLParseError as exc:
+  except CatchableError as exc:
     return (answer: false, reason: exc.msg)
