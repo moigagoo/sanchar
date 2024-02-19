@@ -10,8 +10,9 @@ srcDir        = "src"
 # Dependencies
 
 requires "nim >= 2.0.0"
-requires "nph >= 0.3.0"
-requires "drchaos >= 0.1.9"
+
+taskRequires "fmt", "nph >= 0.3.0"
+taskRequires "test", "drchaos >= 0.1.9"
 
 task fmt, "Format code":
   exec "nph src/"
