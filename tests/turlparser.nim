@@ -32,10 +32,10 @@ suite "url parsing suite":
 
   test "TLDs":
     let
-      dotIn = parse("https://hell.gov.in")
-      dotRu = parse("https://cykablyad.gov.ru")
-      dotUa = parse("https://weneedfivebillionrockets.gov.ua")
-      dotUs = parse("https://killingiraqichildrentutorial.gov.us")
+      dotIn = parse("https://india.gov.in")
+      dotRu = parse("https://russia.gov.ru")
+      dotUa = parse("https://ukraine.gov.ua")
+      dotUs = parse("https://usa.gov.us")
 
       dotCom = parse("https://google.com")
       dotIo = parse("https://icouldntthinkofacleverandfunnydomainthatendswith.io")
@@ -48,6 +48,6 @@ suite "url parsing suite":
     doAssert dotIo.getTld == ".io", dotIo.getTld
 
   test "url fragments":
-    let url = parse("https://ferus.org#why-ferus-sucks")
+    let url = parse("https://ferus.org#why-ferus-rocks")
 
-    doAssert url.fragment == "why-ferus-sucks", url.fragment
+    doAssert url.fragment == "why-ferus-rocks", url.fragment
